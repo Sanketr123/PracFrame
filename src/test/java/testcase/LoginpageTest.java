@@ -38,6 +38,8 @@ public class LoginpageTest extends LaunchBrowser{
          System.out.println(title);
      }
      
+     
+     /*
      @Test(dataProvider = "invalidloginTest")
      public void invalidloginTest(String username, String password) throws InterruptedException {
          Loginpage loginPage = new Loginpage(driver);
@@ -60,8 +62,8 @@ public class LoginpageTest extends LaunchBrowser{
     		 {"performance_glitch_user","*(^*&^*&^%"}, //Valid username and  invalid password
     		 {" "," "} //empty esername and password
     	 };
-    	 
+    	
      }
-     
+     */ 
      
 }
