@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import Webpages.Loginpage;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
@@ -35,7 +36,10 @@ public class LoginpageTest extends LaunchBrowser{
          loginPage.clickLoginButton();
 
          String title = driver.getTitle();
+
          System.out.println(title);
+  		Assert.assertTrue(title.contains("Swag Labs"), "Title is printed");
+
      }
      
      
