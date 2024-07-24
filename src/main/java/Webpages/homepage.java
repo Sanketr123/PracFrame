@@ -26,6 +26,7 @@ public class homepage {
 		util = new resuable(driver);
 	}
 
+	/*
 	public void productlist() { // String username
 
 		// usernameField.sendKeys("standard_user");
@@ -44,6 +45,20 @@ public class homepage {
 		}
 	
 	}
+	
+	*/
+	public List<String> getProductList() {
+        List<String> productlistname = new ArrayList<>();
+        for (WebElement product : productelement) {
+            productlistname.add(product.getText());
+
+        }
+		System.out.println(productlistname);
+        return productlistname;
+    }
+	
+	
+	
 public void gettitle() {
 		
 		System.out.println("Print this");

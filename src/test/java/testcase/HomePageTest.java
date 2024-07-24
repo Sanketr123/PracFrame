@@ -1,9 +1,11 @@
 package testcase;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Webpages.Loginpage;
@@ -28,7 +30,15 @@ public class HomePageTest extends LaunchBrowser {
 		
 		homepage homepg = new homepage(driver);
 
-		homepg.productlist();
+	//	List<String> productlist = homepg.productlist();
+		
+		List<String> productlist = homepg.getProductList();
+		
+		Assert.assertEquals(productlist.size(), 6, "number of product should be 6");
+		
+		Assert.assertFalse(productlist.isEmpty(), "list cannot be empty");
+		
+		Assert.assertTrue(productlist.contains("Sauce Labs Backpack"), "Should contain this product");
 
 		homepg.gettitle();
 
