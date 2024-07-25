@@ -87,7 +87,18 @@
 </dependency>
 
 
-
+   	<dependency>
+    		<groupId>test</groupId>
+    		<artifactId>test</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    	</dependency>
+    	<dependency>
+    		<groupId>SelPrac</groupId>
+    		<artifactId>SelPrac</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    	</dependency>
+    
+    
 
     
     </dependencies>
